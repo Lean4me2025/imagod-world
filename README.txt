@@ -1,18 +1,25 @@
-I AM GOD — Quick Launch Website
+I AM GOD — Clean Tabernacle v1
 
-Files:
-- index.html: Landing page + attribute tile viewer
-- styles.css: Styling
-- app.js: Tile search, modal, daily scripture logic
-- attributes-data.js: Starter attribute data
+Full replacement files:
+- index.html
+- styles.css
+- app.js
+- attributes-data.js
 
-To launch:
-1. Upload all files to your web host or Vercel project root.
-2. Replace PAY_LINK_BASIC_HERE with your $19.99 payment link.
-3. Replace PAY_LINK_PREMIUM_HERE with your $50 payment link.
-4. Later, connect login/payment access using Supabase or another auth provider.
+Upload/replace these files in GitHub, then commit changes.
+Vercel will redeploy automatically.
 
-Suggested title:
-I AM GOD
-Subtitle:
-Know God by His attributes, defined by His Word.
+Includes:
+- Clean modern tabernacle frame
+- Tabernacle colors: blue, purple, scarlet, gold
+- Bible/light visual
+- Smaller hero
+- 20 rotating tiles
+- Attribute modal
+- Daily Scripture
+- Email + phone capture
+- $19.99/year and $50/year access sections
+
+Replace:
+PAY_LINK_BASIC_HERE
+PAY_LINK_PREMIUM_HERE

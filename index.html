@@ -3,96 +3,138 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>I AM GOD | Know God by His Attributes</title>
+  <title>I AM GOD | Discover God Through His Attributes</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav">
-      <div class="brand">I AM GOD</div>
-      <div class="navlinks">
-        <a href="#attributes">Explore</a>
-        <a href="#pricing">Access</a>
-        <a href="#daily">Daily Scripture</a>
-      </div>
-    </nav>
+  <div class="tabernacle-frame">
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand-mark">✦</span>
+          <span>I AM GOD</span>
+        </div>
+        <div class="navlinks">
+          <a href="#attributes">Attributes</a>
+          <a href="#daily">Daily</a>
+          <a href="#pricing">Access</a>
+        </div>
+      </nav>
 
-    <section class="hero-content">
-      <p class="eyebrow">Know God by what He has said, done, revealed, and owns.</p>
-      <h1>Discover who God is through His attributes.</h1>
-      <p class="lead">
-        A Scripture-based attribute database that defines God from His Word:
-        attribute, plain definition, and written-out Scripture witnesses.
-      </p>
-      <div class="cta-row">
-        <a class="button primary" href="#pricing">Start Access</a>
-        <a class="button secondary" href="#attributes">Preview Attributes</a>
-      </div>
-    </section>
-  </header>
+      <section class="hero-content compact">
+        <p class="eyebrow">Know God by what He has revealed.</p>
+        <h1>Discover God through His attributes.</h1>
 
-  <main>
-    <section id="daily" class="daily-card">
-      <div>
+        <div class="bible-light" aria-label="Open Bible with light rising">
+          <div class="glow-orb"></div>
+          <div class="light-rays"></div>
+          <div class="bible-book">
+            <div class="page left-page"></div>
+            <div class="page right-page"></div>
+            <div class="spine"></div>
+          </div>
+        </div>
+
+        <h2 class="subhead">Know Him by His Word — defined through Scripture.</h2>
+
+        <div class="cta-row">
+          <a class="button primary" href="#attributes">Explore Attributes</a>
+          <button class="button secondary" onclick="openAccessModal()">Choose Access</button>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="attributes" class="section attributes-first">
+        <div class="section-head small-head">
+          <p class="eyebrow">Rotating Attribute Tiles</p>
+          <h2>Tap a tile. Open the Word.</h2>
+          <p>These tiles refresh every 30 seconds to reveal more attributes of God.</p>
+        </div>
+
+        <div class="controls">
+          <input id="searchInput" type="search" placeholder="Search mercy, glory, time, wisdom..." />
+          <select id="categoryFilter">
+            <option value="">All Categories</option>
+          </select>
+          <button id="shuffleButton" class="button small secondary" type="button">Show New Tiles</button>
+        </div>
+
+        <div class="rotation-notice">Showing 20 attributes. Next refresh in <span id="countdown">30</span>s.</div>
+        <div id="tiles" class="tiles"></div>
+      </section>
+
+      <section id="daily" class="daily-card">
         <p class="eyebrow">Today’s Attribute</p>
         <h2 id="dailyTitle">Merciful</h2>
         <p id="dailyDefinition">God withholds deserved judgment and shows compassion.</p>
         <p id="dailyVerse" class="verse"></p>
-      </div>
-    </section>
+      </section>
 
-    <section id="attributes" class="section">
-      <div class="section-head">
-        <p class="eyebrow">Attribute Tiles</p>
-        <h2>Tap an attribute. Open the Word.</h2>
-        <p>Search, filter, and select attributes to see definitions and Scripture witnesses.</p>
-      </div>
+      <section class="capture-section">
+        <h3>Receive Daily Scripture</h3>
+        <p>
+          Enter your email and phone number to receive a daily Scripture and discover God
+          through His attributes — one day at a time.
+        </p>
 
-      <div class="controls">
-        <input id="searchInput" type="search" placeholder="Search mercy, glory, time, wisdom..." />
-        <select id="categoryFilter">
-          <option value="">All Categories</option>
-        </select>
-      </div>
+        <form id="captureForm">
+          <input id="captureName" type="text" placeholder="Your name" required />
+          <input id="captureEmail" type="email" placeholder="Email address" required />
+          <input id="capturePhone" type="tel" placeholder="Phone number (for future text delivery)" />
 
-      <div id="tiles" class="tiles"></div>
-    </section>
+          <label class="checkbox">
+            <input id="captureConsent" type="checkbox" required />
+            I agree to receive daily Scripture emails and future text messages when available.
+          </label>
 
-    <section id="pricing" class="section pricing-section">
-      <div class="section-head">
-        <p class="eyebrow">Launch Pricing</p>
-        <h2>Simple access now. Deeper tools next.</h2>
-      </div>
+          <button class="button primary" type="submit">Subscribe</button>
+          <small>Daily email begins first. Text message delivery is coming soon.</small>
+          <p id="captureMessage" class="capture-message"></p>
+        </form>
+      </section>
 
-      <div class="pricing">
-        <article class="price-card">
-          <h3>Basic Access</h3>
-          <div class="price">$19.99</div>
-          <p>View the attribute tiles, definitions, and Scripture witnesses.</p>
-          <ul>
-            <li>Attribute database access</li>
-            <li>Definitions in plain language</li>
-            <li>Written-out Scripture witnesses</li>
-            <li>Daily Scripture feature</li>
-          </ul>
-          <a class="button primary" href="PAY_LINK_BASIC_HERE">Get Basic Access</a>
-        </article>
+      <section id="pricing" class="section pricing-section">
+        <div class="section-head">
+          <p class="eyebrow">Access Options</p>
+          <h2>Choose how you want to study.</h2>
+          <p>Start with the attribute database now. Deeper study tools can be added as the platform grows.</p>
+        </div>
 
-        <article class="price-card featured">
-          <h3>Full Study Access</h3>
-          <div class="price">$50</div>
-          <p>Deeper database tools for study, printing, and combining related attributes.</p>
-          <ul>
-            <li>Everything in Basic</li>
-            <li>Multi-attribute study builder</li>
-            <li>Related Scripture groupings</li>
-            <li>Printable study packs</li>
-          </ul>
-          <a class="button primary" href="PAY_LINK_PREMIUM_HERE">Get Full Access</a>
-        </article>
-      </div>
-    </section>
-  </main>
+        <div class="pricing">
+          <article class="price-card">
+            <h3>Basic Access</h3>
+            <div class="price">$19.99<span>/year</span></div>
+            <p>Browse attributes, definitions, and Scripture witnesses.</p>
+            <ul>
+              <li>Attribute tiles</li>
+              <li>Plain definitions</li>
+              <li>Written-out Scriptures</li>
+              <li>Daily Scripture feature</li>
+            </ul>
+            <a class="button primary" href="PAY_LINK_BASIC_HERE">Get Basic Access</a>
+          </article>
+
+          <article class="price-card featured">
+            <h3>Full Study Access</h3>
+            <div class="price">$50<span>/year</span></div>
+            <p>Advanced study tools for deeper searching and combined attribute studies.</p>
+            <ul>
+              <li>Everything in Basic</li>
+              <li>Multi-attribute study builder</li>
+              <li>Related Scripture bundles</li>
+              <li>Printable study packs</li>
+            </ul>
+            <a class="button primary" href="PAY_LINK_PREMIUM_HERE">Get Full Access</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>I AM GOD — Discover God through His attributes.</p>
+    </footer>
+  </div>
 
   <dialog id="attributeModal">
     <button id="closeModal" class="close">×</button>
@@ -104,9 +146,21 @@
     <button onclick="window.print()" class="button secondary print-btn">Print This Attribute</button>
   </dialog>
 
-  <footer>
-    <p>I AM GOD — A Scripture-based attribute discovery project.</p>
-  </footer>
+  <dialog id="accessModal">
+    <button id="closeAccessModal" class="close">×</button>
+    <p class="eyebrow">Choose Access</p>
+    <h2>Start studying God’s attributes today.</h2>
+    <div class="modal-pricing">
+      <a class="access-choice" href="PAY_LINK_BASIC_HERE">
+        <strong>Basic Access — $19.99/year</strong>
+        <span>Attribute definitions + Scripture witnesses</span>
+      </a>
+      <a class="access-choice premium" href="PAY_LINK_PREMIUM_HERE">
+        <strong>Full Study Access — $50/year</strong>
+        <span>Full database tools + related Scripture study packs</span>
+      </a>
+    </div>
+  </dialog>
 
   <script src="attributes-data.js"></script>
   <script src="app.js"></script>
