@@ -109,7 +109,7 @@ function setDaily(){
    Paste your anon public key in the placeholder below.
 ========================================================= */
 
-const SUPABASE_URL = "https://xaiwaotwfstwmcqjbuic.supabase.co";
+const SUPABASE_URL = "https://xaiwaotwfstwmcqibuic.supabase.co";
 const SUPABASE_ANON_KEY = "PASTE_YOUR_SUPABASE_ANON_KEY_HERE";
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -148,6 +148,41 @@ if (planSelect) {
   });
 }
 
+async function saveOrUpdateRegistration(payload) {
+  const { data: existingRows, error: lookupError } = await supabaseClient
+    .from("iamgod_registrations")
+    .select("id")
+    .eq("email", payload.email)
+    .limit(1);
+
+  if (lookupError) {
+    throw lookupError;
+  }
+
+  if (existingRows && existingRows.length > 0) {
+    const { error: updateError } = await supabaseClient
+      .from("iamgod_registrations")
+      .update(payload)
+      .eq("email", payload.email);
+
+    if (updateError) {
+      throw updateError;
+    }
+
+    return "updated";
+  }
+
+  const { error: insertError } = await supabaseClient
+    .from("iamgod_registrations")
+    .insert([payload]);
+
+  if (insertError) {
+    throw insertError;
+  }
+
+  return "inserted";
+}
+
 const accessForm = document.getElementById("accessForm");
 if (accessForm) {
   accessForm.addEventListener("submit", async function(e) {
@@ -157,7 +192,6 @@ if (accessForm) {
     const name = document.getElementById("accessName").value.trim();
     const email = document.getElementById("accessEmail").value.trim().toLowerCase();
     const phone = document.getElementById("accessPhone").value.trim();
-    const password = document.getElementById("accessPassword").value;
     const consent = document.getElementById("accessConsent").checked;
     const msg = document.getElementById("accessMessage");
 
@@ -171,34 +205,39 @@ if (accessForm) {
       accessStatus = "active";
     }
 
-    const { error } = await supabaseClient
-      .from("iamgod_registrations")
-      .insert([{
-        name: name,
-        email: email,
-        phone: phone,
-        selected_plan: selectedPlan,
-        payment_status: paymentStatus,
-        access_status: accessStatus,
-        daily_email_opt_in: true,
-        future_sms_opt_in: consent
-      }]);
+    const payload = {
+      name: name,
+      email: email,
+      phone: phone,
+      selected_plan: selectedPlan,
+      access_level: selectedPlan,
+      payment_status: paymentStatus,
+      access_status: accessStatus,
+      daily_email_opt_in: true,
+      future_sms_opt_in: consent
+    };
 
-    if (error) {
-      console.error("Supabase registration error:", error);
+    try {
+      await saveOrUpdateRegistration(payload);
+    } catch (error) {
+      console.error("Supabase registration/update error:", error);
       msg.textContent = "Registration could not be saved. Please check the Supabase key and table settings.";
       return;
     }
 
     if (selectedPlan === "basic") {
       msg.textContent = "Registration saved. Redirecting to Basic Access payment...";
-      setTimeout(() => window.location.href = BASIC_PAY_LINK, 800);
+      setTimeout(() => {
+        window.location.href = BASIC_PAY_LINK;
+      }, 700);
       return;
     }
 
     if (selectedPlan === "full") {
       msg.textContent = "Registration saved. Redirecting to Full Study payment...";
-      setTimeout(() => window.location.href = FULL_PAY_LINK, 800);
+      setTimeout(() => {
+        window.location.href = FULL_PAY_LINK;
+      }, 700);
       return;
     }
 
