@@ -35,3 +35,17 @@ Supabase table should include:
 id, created_at, name, email, phone, selected_plan, payment_status, access_status, daily_email_opt_in, future_sms_opt_in
 
 RLS is currently disabled, which is okay for this V1 launch test.
+
+
+BASIC ACCESS V1 ADDED:
+- basic.html
+- Shows core attribute library
+- Search/filter
+- Definitions
+- First Scripture witness
+- Reflection prompts
+- Upgrade strip to Full Access
+
+Suggested immediate use:
+- Set Basic payment success/return URL to https://iamgod.world/basic.html if your pay link supports return URLs.
+- If not, manually send paid Basic users this link after payment until automated unlock is built.
