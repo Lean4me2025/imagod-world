@@ -24,3 +24,8 @@ Includes:
 Replace:
 PAY_LINK_BASIC_HERE
 PAY_LINK_PREMIUM_HERE
+
+
+Eyebrow readability update:
+- The small header line now appears as a scarlet banner with gold/linen text.
+- Full file replacement recommended: replace styles.css entirely.
