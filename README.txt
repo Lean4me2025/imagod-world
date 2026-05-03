@@ -1,31 +1,37 @@
-I AM GOD — Locked Hero Image v1
+I AM GOD FINAL V1 — FULL REPLACEMENT PACKAGE
 
-Full replacement files:
+Upload/replace ALL files in GitHub:
 - index.html
 - styles.css
 - app.js
 - attributes-data.js
+- access.html
+- create-access.html
 - assets/bible-light-hero.png
 
-Upload the assets folder and replace the four root files in GitHub.
-Commit changes. Vercel redeploys automatically.
+IMPORTANT BEFORE COMMIT/TEST:
+In app.js, replace:
+PASTE_YOUR_SUPABASE_ANON_KEY_HERE
+with your Supabase anon/public key.
 
-Includes:
-- Approved Bible/light hero image
-- Clean modern tabernacle frame
-- Tabernacle colors
-- Free preview modal: definition + 1 scripture
-- Unlock Full Study prompt
-- 20 rotating tiles
-- Daily Scripture
-- Email + phone capture
-- $19.99/year and $50/year access sections
+Already included:
+- Supabase URL: https://xaiwaotwfstwmcqjbuic.supabase.co
+- Supabase table name: iamgod_registrations
+- Basic pay link
+- Full pay link
 
-Replace:
-PAY_LINK_BASIC_HERE
-PAY_LINK_PREMIUM_HERE
+What this version includes:
+- Clean hero with approved Bible/light image
+- No “rotating attribute tiles” wording
+- Tiles rotate every 15 seconds quietly
+- 30 attributes so rotation is visible
+- Free / Basic / Full three-column plan chart
+- One registration form below the plan choices
+- Registration saves to Supabase before payment redirect
+- Free users: payment_status=free, access_status=active
+- Basic/Full: payment_status=pending, access_status=pending_payment, then redirect to GoDaddy pay link
 
+Supabase table should include:
+id, created_at, name, email, phone, selected_plan, payment_status, access_status, daily_email_opt_in, future_sms_opt_in
 
-Eyebrow readability update:
-- The small header line now appears as a scarlet banner with gold/linen text.
-- Full file replacement recommended: replace styles.css entirely.
+RLS is currently disabled, which is okay for this V1 launch test.

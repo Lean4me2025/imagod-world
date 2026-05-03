@@ -310,5 +310,125 @@ const GOD_ATTRIBUTES = [
         "text": "Jesus Christ the same yesterday, and to day, and for ever."
       }
     ]
+  },
+  {
+    "number": 21,
+    "category": "Relationship / Protection",
+    "attribute": "Refuge",
+    "definition": "A safe place of shelter and protection in trouble.",
+    "scriptures": [
+      {
+        "reference": "Psalm 46:1",
+        "text": "God is our refuge and strength, a very present help in trouble."
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "category": "Function / Action",
+    "attribute": "Revealer",
+    "definition": "Makes hidden things known.",
+    "scriptures": [
+      {
+        "reference": "Daniel 2:22",
+        "text": "He revealeth the deep and secret things."
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "category": "Function / Action",
+    "attribute": "Teacher",
+    "definition": "Instructs, guides, and gives understanding.",
+    "scriptures": [
+      {
+        "reference": "Psalm 32:8",
+        "text": "I will instruct thee and teach thee in the way which thou shalt go."
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "category": "Function / Action",
+    "attribute": "Healer",
+    "definition": "Restores and heals according to His power and mercy.",
+    "scriptures": [
+      {
+        "reference": "Exodus 15:26",
+        "text": "I am the LORD that healeth thee."
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "category": "Relationship / Protection",
+    "attribute": "Protector",
+    "definition": "Defends and delivers His people.",
+    "scriptures": [
+      {
+        "reference": "Psalm 18:2",
+        "text": "The LORD is my rock, and my fortress, and my deliverer."
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "category": "Redemption / Salvation",
+    "attribute": "Redeemer",
+    "definition": "Purchases and saves from sin and bondage.",
+    "scriptures": [
+      {
+        "reference": "Isaiah 59:20",
+        "text": "And the Redeemer shall come to Zion."
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "category": "Light / Truth",
+    "attribute": "Light of the World",
+    "definition": "Illuminates the path of truth.",
+    "scriptures": [
+      {
+        "reference": "John 8:12",
+        "text": "I am the light of the world: he that followeth me shall not walk in darkness."
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "category": "Provision / Care",
+    "attribute": "Provider",
+    "definition": "Supplies what is needed according to His will.",
+    "scriptures": [
+      {
+        "reference": "Philippians 4:19",
+        "text": "But my God shall supply all your need according to his riches in glory by Christ Jesus."
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "category": "Wisdom / Guidance",
+    "attribute": "Counselor",
+    "definition": "Gives wise counsel and guidance.",
+    "scriptures": [
+      {
+        "reference": "Isaiah 9:6",
+        "text": "His name shall be called Wonderful, Counsellor, The mighty God."
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "category": "Peace / Restoration",
+    "attribute": "Peace",
+    "definition": "Brings wholeness, stillness, and reconciliation.",
+    "scriptures": [
+      {
+        "reference": "Judges 6:24",
+        "text": "Then Gideon built an altar there unto the LORD, and called it Jehovahshalom."
+      }
+    ]
   }
 ];
