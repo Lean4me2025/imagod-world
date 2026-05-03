@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I AM GOD | Know God by His Attributes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">I AM GOD</div>
+      <div class="navlinks">
+        <a href="#attributes">Explore</a>
+        <a href="#pricing">Access</a>
+        <a href="#daily">Daily Scripture</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Know God by what He has said, done, revealed, and owns.</p>
+      <h1>Discover who God is through His attributes.</h1>
+      <p class="lead">
+        A Scripture-based attribute database that defines God from His Word:
+        attribute, plain definition, and written-out Scripture witnesses.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="#pricing">Start Access</a>
+        <a class="button secondary" href="#attributes">Preview Attributes</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="daily" class="daily-card">
+      <div>
+        <p class="eyebrow">Today’s Attribute</p>
+        <h2 id="dailyTitle">Merciful</h2>
+        <p id="dailyDefinition">God withholds deserved judgment and shows compassion.</p>
+        <p id="dailyVerse" class="verse"></p>
+      </div>
+    </section>
+
+    <section id="attributes" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Attribute Tiles</p>
+        <h2>Tap an attribute. Open the Word.</h2>
+        <p>Search, filter, and select attributes to see definitions and Scripture witnesses.</p>
+      </div>
+
+      <div class="controls">
+        <input id="searchInput" type="search" placeholder="Search mercy, glory, time, wisdom..." />
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+
+      <div id="tiles" class="tiles"></div>
+    </section>
+
+    <section id="pricing" class="section pricing-section">
+      <div class="section-head">
+        <p class="eyebrow">Launch Pricing</p>
+        <h2>Simple access now. Deeper tools next.</h2>
+      </div>
+
+      <div class="pricing">
+        <article class="price-card">
+          <h3>Basic Access</h3>
+          <div class="price">$19.99</div>
+          <p>View the attribute tiles, definitions, and Scripture witnesses.</p>
+          <ul>
+            <li>Attribute database access</li>
+            <li>Definitions in plain language</li>
+            <li>Written-out Scripture witnesses</li>
+            <li>Daily Scripture feature</li>
+          </ul>
+          <a class="button primary" href="PAY_LINK_BASIC_HERE">Get Basic Access</a>
+        </article>
+
+        <article class="price-card featured">
+          <h3>Full Study Access</h3>
+          <div class="price">$50</div>
+          <p>Deeper database tools for study, printing, and combining related attributes.</p>
+          <ul>
+            <li>Everything in Basic</li>
+            <li>Multi-attribute study builder</li>
+            <li>Related Scripture groupings</li>
+            <li>Printable study packs</li>
+          </ul>
+          <a class="button primary" href="PAY_LINK_PREMIUM_HERE">Get Full Access</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="attributeModal">
+    <button id="closeModal" class="close">×</button>
+    <p id="modalCategory" class="eyebrow"></p>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDefinition" class="modal-definition"></p>
+    <h3>Scripture Witnesses</h3>
+    <div id="modalScriptures"></div>
+    <button onclick="window.print()" class="button secondary print-btn">Print This Attribute</button>
+  </dialog>
+
+  <footer>
+    <p>I AM GOD — A Scripture-based attribute discovery project.</p>
+  </footer>
+
+  <script src="attributes-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
