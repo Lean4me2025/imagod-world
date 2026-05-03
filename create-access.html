@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Access</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="form-section">
+
+  <h1 id="planTitle">Create Your Access</h1>
+
+  <form id="accessForm">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone">
+    <input type="password" placeholder="Password" required>
+
+    <button type="submit">Continue</button>
+  </form>
+
+</section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const plan = params.get('plan');
+
+const title = document.getElementById('planTitle');
+
+if(plan === 'free'){
+  title.innerText = "Daily Scripture (Free)";
+}
+if(plan === 'basic'){
+  title.innerText = "Basic Access — $19.99/year";
+}
+if(plan === 'full'){
+  title.innerText = "Full Study Access — $50/year";
+}
+
+document.getElementById('accessForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  if(plan === 'basic'){
+    window.location.href = "YOUR_BASIC_PAY_LINK";
+  }
+  else if(plan === 'full'){
+    window.location.href = "YOUR_FULL_PAY_LINK";
+  }
+  else{
+    alert("You're registered for daily Scripture.");
+  }
+});
+</script>
+
+</body>
+</html>
