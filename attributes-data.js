@@ -310,53 +310,5 @@ const GOD_ATTRIBUTES = [
         "text": "Jesus Christ the same yesterday, and to day, and for ever."
       }
     ]
-  },
-  {
-    "number": 21,
-    "category": "Relationship / Protection",
-    "attribute": "Refuge",
-    "definition": "A safe place of shelter and protection in trouble.",
-    "scriptures": [
-      {
-        "reference": "Psalm 46:1",
-        "text": "God is our refuge and strength, a very present help in trouble."
-      }
-    ]
-  },
-  {
-    "number": 22,
-    "category": "Function / Action",
-    "attribute": "Revealer",
-    "definition": "Makes hidden things known.",
-    "scriptures": [
-      {
-        "reference": "Daniel 2:22",
-        "text": "He revealeth the deep and secret things."
-      }
-    ]
-  },
-  {
-    "number": 23,
-    "category": "Function / Action",
-    "attribute": "Teacher",
-    "definition": "Instructs, guides, and gives understanding.",
-    "scriptures": [
-      {
-        "reference": "Psalm 32:8",
-        "text": "I will instruct thee and teach thee in the way which thou shalt go."
-      }
-    ]
-  },
-  {
-    "number": 24,
-    "category": "Function / Action",
-    "attribute": "Healer",
-    "definition": "Restores and heals according to His power and mercy.",
-    "scriptures": [
-      {
-        "reference": "Exodus 15:26",
-        "text": "I am the LORD that healeth thee."
-      }
-    ]
   }
 ];

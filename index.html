@@ -25,15 +25,9 @@
         <p class="eyebrow">Know God by what He has revealed.</p>
         <h1>Discover God through His attributes.</h1>
 
-        <div class="bible-light" aria-label="Open Bible with light rising">
-          <div class="glow-orb"></div>
-          <div class="light-rays"></div>
-          <div class="bible-book">
-            <div class="page left-page"></div>
-            <div class="page right-page"></div>
-            <div class="spine"></div>
-          </div>
-        </div>
+        <figure class="hero-image-wrap">
+          <img src="assets/bible-light-hero.png" alt="Open Bible with light rising from Scripture" class="hero-bible-image" />
+        </figure>
 
         <h2 class="subhead">Know Him by His Word — defined through Scripture.</h2>
 
@@ -49,7 +43,7 @@
         <div class="section-head small-head">
           <p class="eyebrow">Rotating Attribute Tiles</p>
           <h2>Tap a tile. Open the Word.</h2>
-          <p>These tiles refresh every 30 seconds to reveal more attributes of God.</p>
+          <p>Preview the attributes freely. Unlock full Scripture study with access.</p>
         </div>
 
         <div class="controls">
@@ -141,9 +135,12 @@
     <p id="modalCategory" class="eyebrow"></p>
     <h2 id="modalTitle"></h2>
     <p id="modalDefinition" class="modal-definition"></p>
-    <h3>Scripture Witnesses</h3>
+    <h3>Scripture Preview</h3>
     <div id="modalScriptures"></div>
-    <button onclick="window.print()" class="button secondary print-btn">Print This Attribute</button>
+    <div class="locked-section">
+      <p>🔒 Full study includes additional Scripture witnesses, depth, print options, and related attributes.</p>
+      <button class="button primary" onclick="switchToAccess()">Unlock Full Study</button>
+    </div>
   </dialog>
 
   <dialog id="accessModal">

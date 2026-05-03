@@ -78,13 +78,18 @@ function startCountdown(){
   }, 1000);
 }
 function openAttribute(a){
+  const firstScripture = a.scriptures[0] ? [a.scriptures[0]] : [];
   document.getElementById('modalCategory').textContent = a.category;
   document.getElementById('modalTitle').textContent = a.attribute;
   document.getElementById('modalDefinition').textContent = a.definition;
-  document.getElementById('modalScriptures').innerHTML = a.scriptures.map(s => `<div class="scripture"><strong>${s.reference}</strong><span>${s.text}</span></div>`).join('');
+  document.getElementById('modalScriptures').innerHTML = firstScripture.map(s => `<div class="scripture"><strong>${s.reference}</strong><span>${s.text}</span></div>`).join('');
   modal.showModal();
 }
 function openAccessModal(){ accessModal.showModal(); }
+function switchToAccess(){
+  modal.close();
+  accessModal.showModal();
+}
 
 document.getElementById('closeModal').onclick = () => modal.close();
 document.getElementById('closeAccessModal').onclick = () => accessModal.close();
