@@ -110,7 +110,7 @@ function setDaily(){
 ========================================================= */
 
 const SUPABASE_URL = "https://xaiwaotwfstwmcqibuic.supabase.co";
-const SUPABASE_ANON_KEY = "PASTE_YOUR_SUPABASE_ANON_KEY_HERE";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhaXdhb3R3ZnN0d21jcWlidWljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4MzE3ODcsImV4cCI6MjA5MzQwNzc4N30.XyHrR5Tc1eBc96IT5tE4pbnhgcmke-GgvhwB7hHZs-c";
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
