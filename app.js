@@ -114,8 +114,8 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-const BASIC_PAY_LINK = "https://buy.stripe.com/6oU7sN2SacZHgPdW66J201";
-const FULL_PAY_LINK = "https://buy.stripe.com/5kQcN71067EXGeP2Rs6J200";
+const BASIC_PAY_LINK = "https://buy.stripe.com/6oU7sN2SacZh9ePdw66J201";
+const FULL_PAY_LINK = "https://buy.stripe.com/5kQcN71O67EX9eP2Rs6J200";
 
 function planLabel(plan) {
   if (plan === "basic") return "Basic Access — $19.99/year";
