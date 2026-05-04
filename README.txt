@@ -60,3 +60,12 @@ PAY LINK + UPGRADE FLOW V1 ADDED:
 
 IMPORTANT:
 - In app.js, replace PASTE_YOUR_SUPABASE_ANON_KEY_HERE with your actual Supabase anon/publishable key before committing if it is not already inserted.
+
+
+STRIPE LINKS INSERTED:
+- app.js now uses Stripe links instead of GoDaddy pay links.
+- BASIC_PAY_LINK = https://buy.stripe.com/6oU7sN2SacZHgPdW66J201
+- FULL_PAY_LINK = https://buy.stripe.com/5kQcN71067EXGeP2Rs6J200
+
+IMPORTANT:
+- Confirm your Supabase anon key is still inserted in app.js before deployment.

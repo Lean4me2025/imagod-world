@@ -110,12 +110,12 @@ function setDaily(){
 ========================================================= */
 
 const SUPABASE_URL = "https://xaiwaotwfstwmcqibuic.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhaXdhb3R3ZnN0d21jcWlidWljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4MzE3ODcsImV4cCI6MjA5MzQwNzc4N30.XyHrR5Tc1eBc96IT5tE4pbnhgcmke-GgvhwB7hHZs-c";
+const SUPABASE_ANON_KEY = "PASTE_YOUR_SUPABASE_ANON_KEY_HERE";
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-const BASIC_PAY_LINK = "https://cf0739c0-1665-4a99-ab4d-94aa46621c82.paylinks.godaddy.com";
-const FULL_PAY_LINK = "https://cf0739c0-1665-4a99-ab4d-94aa46621c82.paylinks.godaddy.com/8fcc6bfe-5f01-4345-b456-6e5";
+const BASIC_PAY_LINK = "https://buy.stripe.com/6oU7sN2SacZHgPdW66J201";
+const FULL_PAY_LINK = "https://buy.stripe.com/5kQcN71067EXGeP2Rs6J200";
 
 function planLabel(plan) {
   if (plan === "basic") return "Basic Access — $19.99/year";
